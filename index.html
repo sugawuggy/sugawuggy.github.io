@@ -18,7 +18,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header>
+    <header class="hero">
         <div class="hero-content">
             <h1>Bringing Your Roblox Games to Life</h1>
             <p>Expert Scripter | UI Animator | Datastores & Interactions</p>
@@ -56,6 +56,7 @@
     </footer>
 </body>
 </html>
+
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
@@ -63,32 +64,28 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
-}
-
-h1, h2, h3 {
-    margin: 0;
-    color: #333;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
+    overflow-x: hidden;
 }
 
 /* Navbar Styles */
 nav {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.4); /* Glass-like background */
     color: #fff;
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
 }
 
 nav .logo {
     font-size: 24px;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 nav ul {
@@ -100,6 +97,7 @@ nav ul {
 nav ul li a {
     color: #fff;
     font-size: 16px;
+    text-transform: uppercase;
     transition: color 0.3s ease;
 }
 
@@ -107,44 +105,54 @@ nav ul li a:hover {
     color: #eaeaea;
 }
 
-/* Hero Section Styles */
-header {
-    background: linear-gradient(45deg, #2d5e8c, #587c8c);
+/* Hero Section */
+header.hero {
+    background: linear-gradient(45deg, #3498db, #2ecc71); /* Bright gradient background */
     color: #fff;
     padding: 100px 20px;
     text-align: center;
-    background-size: cover;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.2);
 }
 
-header .hero-content {
-    max-width: 600px;
+.hero-content {
+    max-width: 700px;
     margin: 0 auto;
 }
 
 header h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease-out;
 }
 
 header p {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 30px;
+    opacity: 0.8;
 }
 
 .cta-button {
     background-color: #ff6b6b;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 30px;
     color: #fff;
-    transition: background-color 0.3s ease;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 }
 
 .cta-button:hover {
     background-color: #ff3b3b;
+    transform: scale(1.1);
 }
 
-/* Projects Section Styles */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Projects Section */
 #projects {
     padding: 60px 20px;
     text-align: center;
@@ -157,45 +165,59 @@ header p {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
 }
 
 .project-card {
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px); /* Adding blur for a frosted glass effect */
 }
 
 .project-card img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
     height: 200px;
     object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #555;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Contact Section Styles */
+/* Contact Section */
 #contact {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight glass effect */
     padding: 60px 20px;
     text-align: center;
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #contact p {
     font-size: 18px;
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
-    text-align: center;
-    padding: 20px;
-}
+   
