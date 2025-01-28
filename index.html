@@ -19,8 +19,11 @@
 
     <!-- Hero Section -->
     <header>
-        <h1>Bringing Your Roblox Games to Life</h1>
-        <p>Expert Scripter | UI Animator | Datastores & Interactions</p>
+        <div class="hero-content">
+            <h1>Bringing Your Roblox Games to Life</h1>
+            <p>Expert Scripter | UI Animator | Datastores & Interactions</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
     </header>
 
     <!-- Projects Section -->
@@ -28,12 +31,12 @@
         <h2>My Projects</h2>
         <div class="project-grid">
             <div class="project-card">
-                <img src="project1.jpg" alt="Project 1">
+                <img src="project1.jpg" alt="Datastore System">
                 <h3>Datastore System</h3>
                 <p>A robust and secure datastore system for Roblox games.</p>
             </div>
             <div class="project-card">
-                <img src="project2.jpg" alt="Project 2">
+                <img src="project2.jpg" alt="GUI Animations">
                 <h3>GUI Animations</h3>
                 <p>Smooth, optimized UI animations for interactive experiences.</p>
             </div>
@@ -53,3 +56,146 @@
     </footer>
 </body>
 </html>
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar Styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #eaeaea;
+}
+
+/* Hero Section Styles */
+header {
+    background: linear-gradient(45deg, #2d5e8c, #587c8c);
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    background-size: cover;
+}
+
+header .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ff6b6b;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff3b3b;
+}
+
+/* Projects Section Styles */
+#projects {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#contact p {
+    font-size: 18px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
